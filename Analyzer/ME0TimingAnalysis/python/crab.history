@@ -1,0 +1,13 @@
+150929_174118: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -create
+150929_174144: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -create
+150929_174149: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -create
+150929_174442: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -submit 1-500 -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/
+150929_174838: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/
+150929_175103: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/
+150929_182034: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/
+150929_182120: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/ -get
+150929_183933: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/
+150930_041419: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/
+150930_041846: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps/ -get
+150930_053126: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -create -submit
+150930_053502: /cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -create -submit
