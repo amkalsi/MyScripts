@@ -16,3 +16,6 @@ Datasets to be used:
 300 ps
 
 /DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/amkalsi-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution_300ps-234f53f4ed8c29359bbc4ab1d08753f2/USER
+
+500 ps
+/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/amkalsi-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution_500ps-234f53f4ed8c29359bbc4ab1d08753f2/USER
