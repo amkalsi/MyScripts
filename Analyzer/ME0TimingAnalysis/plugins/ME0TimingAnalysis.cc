@@ -64,8 +64,8 @@ class ME0TimingAnalysis : public edm::EDAnalyzer {
 		edm::Service<TFileService> fs;
 
 		TH1F *hFillSignalMuontime,*hFillPUMuontime;
-               TH1F *hFillSignalMuontimeErr,*hFillPUMuontimeErr;
-	       TH1F *hFillZMass;
+		TH1F *hFillSignalMuontimeErr,*hFillPUMuontimeErr;
+		TH1F *hFillZMass , *hFillZGenMass, *hFillRecoEta;
 };
 
 //
@@ -108,7 +108,6 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 	/*
 	   vector<reco::ME0Muon>                 "me0SegmentMatching"        ""                "RECO"       
 	   */
-	cout<<"=============== Event==============================="<<endl;
 	edm::Handle <std::vector<ME0Muon> > OurMuons;
 	iEvent.getByLabel <std::vector<ME0Muon> > ("me0SegmentMatching", OurMuons);
 
@@ -138,14 +137,14 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 	}
 	if(indexmu.size() != 2) return;
 
-//        if(reco::deltaR(genparticles->at(indexmu.at(0)).eta(), genparticles->at(indexmu.at(0)).phi(),genparticles->at(indexmu.at(1)).eta(), genparticles->at(indexmu.at(1)).phi()) < 0.25) return;
-/*
-        for( unsigned int j = 0;  j < indexmu.size(); j++) {
-                 for( unsigned int k = j+1;  k < indexmu.size(); k++) {
-                    if()
-           }  
-        } 
-*/
+	if(reco::deltaR(genparticles->at(indexmu.at(0)).eta(), genparticles->at(indexmu.at(0)).phi(),genparticles->at(indexmu.at(1)).eta(), genparticles->at(indexmu.at(1)).phi()) < 0.25) return;
+	/*
+	   for( unsigned int j = 0;  j < indexmu.size(); j++) {
+	   for( unsigned int k = j+1;  k < indexmu.size(); k++) {
+	   if()
+	   }  
+	   } 
+	   */
 
 	//double DRtmp = 0.25;
 	std::vector<bool> IsMatched;
@@ -173,20 +172,34 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 	if(me0muons.size() > 1) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(1)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(1)).me0segment().timeErr()); }
 	if(me0muons.size() > 2) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(2)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(2)).me0segment().timeErr());}
 
-          TLorentzVector muon1,muon2;
-         for( unsigned int j = 0;  j < me0muons.size(); j++) {
-             for( unsigned int ji = j+1; ji < me0muons.size(); ji++) { 
-//              hFillZMass->Fill((OurMuons->at(me0muons.at(j)).p()+ OurMuons->at(me0muons.at(ji)).p()).M());            
-//          if(reco::deltaR(OurMuons->at(me0muons.at(j)).eta(),OurMuons->at(me0muons.at(j)).phi(),OurMuons->at(me0muons.at(ji)).eta(),OurMuons->at(me0muons.at(ji)).phi()) < 0.3) continue;
-          muon1.SetPtEtaPhiM(OurMuons->at(me0muons.at(j)).pt(),OurMuons->at(me0muons.at(j)).eta(),OurMuons->at(me0muons.at(j)).phi(),0);//OurMuons->at(me0muons.at(j)).energy());
-         muon2.SetPtEtaPhiM(OurMuons->at(me0muons.at(ji)).pt(),OurMuons->at(me0muons.at(ji)).eta(),OurMuons->at(me0muons.at(ji)).phi(),0);//OurMuons->at(me0muons.at(ji)).energy());
-          hFillZMass->Fill((muon1+muon2).M());
-        }
-       }
+	TLorentzVector muon1,muon2;
+	for( unsigned int j = 0;  j < me0muons.size(); j++) {
+		hFillRecoEta->Fill(OurMuons->at(me0muons.at(j)).eta());
+		for( unsigned int ji = j+1; ji < me0muons.size(); ji++) { 
+
+			//              hFillZMass->Fill((OurMuons->at(me0muons.at(j)).p()+ OurMuons->at(me0muons.at(ji)).p()).M());            
+			//          if(reco::deltaR(OurMuons->at(me0muons.at(j)).eta(),OurMuons->at(me0muons.at(j)).phi(),OurMuons->at(me0muons.at(ji)).eta(),OurMuons->at(me0muons.at(ji)).phi()) < 0.3) continue;
+			muon1.SetPtEtaPhiM(OurMuons->at(me0muons.at(j)).pt(),OurMuons->at(me0muons.at(j)).eta(),OurMuons->at(me0muons.at(j)).phi(),0);//OurMuons->at(me0muons.at(j)).energy());
+			muon2.SetPtEtaPhiM(OurMuons->at(me0muons.at(ji)).pt(),OurMuons->at(me0muons.at(ji)).eta(),OurMuons->at(me0muons.at(ji)).phi(),0);//OurMuons->at(me0muons.at(ji)).energy());
+			hFillZMass->Fill((muon1+muon2).M());
+		}
+	}
 	for (unsigned int t = 0; t < OurMuons->size() ; t++){
-		if(MatchedMuon(me0muons, int(t))) continue;
-		hFillPUMuontime->Fill(OurMuons->at(t).me0segment().time()); 
-		hFillPUMuontimeErr->Fill(OurMuons->at(t).me0segment().timeErr());
+		if(MatchedMuon(me0muons, int(t))) {
+			if(indexmu.size() > 1) {
+				TLorentzVector genmuon1, genmuon2;
+				genmuon1.SetPtEtaPhiM(genparticles->at(indexmu.at(0)).pt(), genparticles->at(indexmu.at(0)).eta(),genparticles->at(indexmu.at(0)).phi(),genparticles->at(indexmu.at(0)).mass());
+
+				genmuon2.SetPtEtaPhiM(genparticles->at(indexmu.at(1)).pt(), genparticles->at(indexmu.at(1)).eta(),genparticles->at(indexmu.at(1)).phi(),genparticles->at(indexmu.at(1)).mass());
+
+				hFillZGenMass->Fill((genmuon1+genmuon2).M());
+
+
+			}
+		} else {
+			hFillPUMuontime->Fill(OurMuons->at(t).me0segment().time()); 
+			hFillPUMuontimeErr->Fill(OurMuons->at(t).me0segment().timeErr());
+		}
 	} 
 
 
@@ -209,11 +222,13 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 ME0TimingAnalysis::beginJob()
 {
 
-	hFillSignalMuontime = fs->make<TH1F>("hFillSignalMuontime","hFillSignalMuontime",1000,0,100);  
-	hFillPUMuontime = fs->make<TH1F>("hFillPUMuontime","hFillPUMuontime",1000,0,100);
-        hFillSignalMuontimeErr = fs->make<TH1F>("hFillSignalMuontimeErr","hFillSignalMuontimeErr",1000,0,10);  
-        hFillPUMuontimeErr = fs->make<TH1F>("hFillPUMuontimeErr","hFillPUMuontimeErr",1000,0,10);
-        hFillZMass = fs->make<TH1F>("hFillZMass","hFillZMass",500,0,250); 
+	hFillSignalMuontime = fs->make<TH1F>("hFillSignalMuontime","hFillSignalMuontime",1000,-150,-150);  
+	hFillPUMuontime = fs->make<TH1F>("hFillPUMuontime","hFillPUMuontime",1000,-150,150);
+	hFillSignalMuontimeErr = fs->make<TH1F>("hFillSignalMuontimeErr","hFillSignalMuontimeErr",1000,0,10);  
+	hFillPUMuontimeErr = fs->make<TH1F>("hFillPUMuontimeErr","hFillPUMuontimeErr",1000,0,10);
+	hFillZMass = fs->make<TH1F>("hFillZMass","hFillZMass",500,0,250); 
+	hFillRecoEta = fs->make<TH1F>("hFillRecoEta","hFillZMass",500,-5,5);
+	hFillZGenMass = fs->make<TH1F>("hFillZGenMass","hFillZGenMass",500,0,250);    
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
