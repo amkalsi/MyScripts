@@ -66,6 +66,8 @@ class ME0TimingAnalysis : public edm::EDAnalyzer {
 		TH1F *hFillSignalMuontime,*hFillPUMuontime;
 		TH1F *hFillSignalMuontimeErr,*hFillPUMuontimeErr;
 		TH1F *hFillZMass , *hFillZGenMass, *hFillRecoEta;
+		TH1F *SignalMuonTime, *BGMuonTime;
+		TH1F *hFillZMassInWindow,*hFillZMassOutWindow;
 };
 
 //
@@ -168,9 +170,10 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 	}
 
 	/// again filling
-	if(me0muons.size() > 0) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(0)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(0)).me0segment().timeErr()); } 
-	if(me0muons.size() > 1) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(1)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(1)).me0segment().timeErr()); }
-	if(me0muons.size() > 2) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(2)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(2)).me0segment().timeErr());}
+	if(me0muons.size() > 0) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(0)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(0)).me0segment().timeErr()); SignalMuonTime->Fill(OurMuons->at(me0muons.at(0)).me0segment().time(), OurMuons->at(me0muons.at(0)).me0segment().timeErr()); }
+
+	if(me0muons.size() > 1) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(1)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(1)).me0segment().timeErr()); SignalMuonTime->Fill(OurMuons->at(me0muons.at(0)).me0segment().time(), OurMuons->at(me0muons.at(0)).me0segment().timeErr()); }
+	if(me0muons.size() > 2) {hFillSignalMuontime->Fill(OurMuons->at(me0muons.at(2)).me0segment().time()); hFillSignalMuontimeErr->Fill(OurMuons->at(me0muons.at(2)).me0segment().timeErr());SignalMuonTime->Fill(OurMuons->at(me0muons.at(0)).me0segment().time(), OurMuons->at(me0muons.at(0)).me0segment().timeErr());}
 
 	TLorentzVector muon1,muon2;
 	for( unsigned int j = 0;  j < me0muons.size(); j++) {
@@ -182,6 +185,14 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 			muon1.SetPtEtaPhiM(OurMuons->at(me0muons.at(j)).pt(),OurMuons->at(me0muons.at(j)).eta(),OurMuons->at(me0muons.at(j)).phi(),0);//OurMuons->at(me0muons.at(j)).energy());
 			muon2.SetPtEtaPhiM(OurMuons->at(me0muons.at(ji)).pt(),OurMuons->at(me0muons.at(ji)).eta(),OurMuons->at(me0muons.at(ji)).phi(),0);//OurMuons->at(me0muons.at(ji)).energy());
 			hFillZMass->Fill((muon1+muon2).M());
+			if((OurMuons->at(me0muons.at(ji)).me0segment().time() >= 5.5  && OurMuons->at(me0muons.at(ji)).me0segment().time() <= 30.5) && (OurMuons->at(me0muons.at(j)).me0segment().time() >= 5.5  && OurMuons->at(me0muons.at(j)).me0segment().time() <= 30.5)) {
+
+				hFillZMassInWindow->Fill((muon1+muon2).M());
+			} else {
+				hFillZMassOutWindow->Fill((muon1+muon2).M());
+
+			}                     
+
 		}
 	}
 	for (unsigned int t = 0; t < OurMuons->size() ; t++){
@@ -199,6 +210,7 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 		} else {
 			hFillPUMuontime->Fill(OurMuons->at(t).me0segment().time()); 
 			hFillPUMuontimeErr->Fill(OurMuons->at(t).me0segment().timeErr());
+			BGMuonTime->Fill(OurMuons->at(t).me0segment().time(),OurMuons->at(t).me0segment().timeErr()); 
 		}
 	} 
 
@@ -222,13 +234,21 @@ ME0TimingAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 ME0TimingAnalysis::beginJob()
 {
 
-	hFillSignalMuontime = fs->make<TH1F>("hFillSignalMuontime","hFillSignalMuontime",1000,-150,-150);  
-	hFillPUMuontime = fs->make<TH1F>("hFillPUMuontime","hFillPUMuontime",1000,-150,150);
+	hFillSignalMuontime = fs->make<TH1F>("hFillSignalMuontime","hFillSignalMuontime",1000,-300,300);  
+	hFillPUMuontime = fs->make<TH1F>("hFillPUMuontime","hFillPUMuontime",1000,-300,300);
 	hFillSignalMuontimeErr = fs->make<TH1F>("hFillSignalMuontimeErr","hFillSignalMuontimeErr",1000,0,10);  
 	hFillPUMuontimeErr = fs->make<TH1F>("hFillPUMuontimeErr","hFillPUMuontimeErr",1000,0,10);
+
+	SignalMuonTime  = fs->make<TH1F>("SignalMuonTime","SignalMuonTime",1000,-300,300);  
+	BGMuonTime  = fs->make<TH1F>("BGMuonTime","BGMuonTime",1000,-300,300);  
 	hFillZMass = fs->make<TH1F>("hFillZMass","hFillZMass",500,0,250); 
-	hFillRecoEta = fs->make<TH1F>("hFillRecoEta","hFillZMass",500,-5,5);
+	hFillRecoEta = fs->make<TH1F>("hFillRecoEta","hFillRecoEta",500,-5,5);
 	hFillZGenMass = fs->make<TH1F>("hFillZGenMass","hFillZGenMass",500,0,250);    
+
+	hFillZMassInWindow = fs->make<TH1F>("hFillZMassInWindow","hFillZMassInWindow",500,0,250);
+	hFillZMassOutWindow = fs->make<TH1F>("hFillZMassOutWindow","hFillZMassOutWindow",500,0,250);
+
+
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
