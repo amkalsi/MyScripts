@@ -1,0 +1,7 @@
+-USER.user_remote_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Good_1000ps
+-USER.ui_working_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Good_1000ps
+-CMSSW.datasetpath=/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_1ns_7ns_RECO-dae2ba7355add6539efc58ac0d4cc16b/USER
+-jobtype=cmssw
+-use_server=0
+-scheduler=remoteGlidein
+-CMSSW.pset=analysisTiming.py

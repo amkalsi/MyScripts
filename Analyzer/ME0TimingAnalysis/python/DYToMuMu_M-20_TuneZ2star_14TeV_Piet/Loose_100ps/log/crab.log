@@ -1,0 +1,328 @@
+2015-10-20 00:35:43,465 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -USER.user_remote_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -create -USER.ui_working_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -CMSSW.datasetpath=/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_100ps_1p5ns_RECO-a6c1ab73bd1959e4a7fbbca874362562/USER -submit -CMSSW.pset=analysisTiming_Loose.py
+
+2015-10-20 00:35:43,465 [INFO] 	Version 2.11.1_patch1 running on Tue Oct 20 00:35:43 2015 CST (05:35:43 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/
+
+2015-10-20 00:35:43,465 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/allowed_releases.conf].
+2015-10-20 00:35:43,585 [DEBUG] 	Input whitelist: 
+2015-10-20 00:35:43,585 [DEBUG] 	Input blacklist: 
+2015-10-20 00:35:43,585 [DEBUG] 	Converted whitelist: 
+2015-10-20 00:35:43,585 [DEBUG] 	Converted blacklist: 
+2015-10-20 00:35:45,007 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/site_black_list.conf].
+2015-10-20 00:35:45,009 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2015-10-20 00:35:46,845 [DEBUG] 	Linux cmslpc23.fnal.gov 2.6.32-504.30.3.el6.x86_64 #1 SMP Tue Jul 14 11:18:03 CDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+ 
+Used properties:
+Linux cmslpc23.fnal.gov 2.6.32-504.30.3.el6.x86_64 #1 SMP Tue Jul 14 11:18:03 CDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+ 
+Used properties:
+   CMSSW.datasetpath : /DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_100ps_1p5ns_RECO-a6c1ab73bd1959e4a7fbbca874362562/USER
+   CMSSW.dbs_url : phys03
+   CMSSW.events_per_job : 1000
+   CMSSW.output_file : OutTree.root
+   CMSSW.pset : analysisTiming_Loose.py
+   CMSSW.total_number_of_events : -1
+   CMSSW.use_dbs3 : 1
+   CRAB.create : 
+   CRAB.jobtype : cmssw
+   CRAB.scheduler : remoteGlidein
+   CRAB.submit : 
+   CRAB.use_server : 0
+   USER.copy_data : 0
+   USER.return_data : 1
+   USER.ui_working_dir : DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps
+   USER.user_remote_dir : DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps
+End of used properties.
+
+2015-10-20 00:35:46,846 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/site_black_list.conf].
+2015-10-20 00:35:46,847 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2015-10-20 00:35:46,847 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2015-10-20 00:35:46,917 [DEBUG] 	CMSSW::__init__
+2015-10-20 00:35:46,918 [DEBUG] 	Scram::Scram() version is 2
+2015-10-20 00:35:46,918 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc472
+2015-10-20 00:35:46,918 [DEBUG] 	Downloading file [https://cmssdt.cern.ch/SDT/cgi-bin] to [/uscms/home/aman30/.cms_crab/ReleasesXML?anytype=1].
+2015-10-20 00:35:46,996 [INFO] 	Contacting Data Discovery Services ...
+2015-10-20 00:35:46,996 [DEBUG] 	No mapping to a DBS2 instance possible for dbs_url=https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader
+2015-10-20 00:35:46,996 [INFO] 	Accessing DBS at: https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader
+2015-10-20 00:35:50,666 [INFO] 	DBS3 lookup took  3.62 sec
+2015-10-20 00:35:50,779 [INFO] 	Datatype is mc
+2015-10-20 00:35:50,788 [DEBUG] 	No mapping to a DBS2 instance possible for dbs_url=https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader
+2015-10-20 00:35:50,788 [DEBUG] 	Retrieve block locations with
+curl -ks --cert $X509_USER_PROXY --key $X509_USER_PROXY "https://cmsweb.cern.ch/phedex/datasvc/json/prod/BlockReplicaSummary?dataset=/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_100ps_1p5ns_RECO-a6c1ab73bd1959e4a7fbbca874362562/USER&complete=y"
+2015-10-20 00:35:52,018 [DEBUG] 	Retrieve PNNs type with
+curl -ks --cert $X509_USER_PROXY --key $X509_USER_PROXY "https://cmsweb.cern.ch/phedex/datasvc/cjson/prod/nodes"
+2015-10-20 00:35:53,211 [INFO] 	No dataset location information found in PhEDEx
+2015-10-20 00:35:53,211 [INFO] 	Use origin site location recorded in local scope DBS
+2015-10-20 00:35:55,830 [INFO] 	Requested dataset: /DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_100ps_1p5ns_RECO-a6c1ab73bd1959e4a7fbbca874362562/USER has 9990 events in 3 blocks.
+
+2015-10-20 00:35:57,412 [DEBUG] 	Job splitting method: EventBased
+2015-10-20 00:35:57,412 [DEBUG] 	Events in Block File 50
+2015-10-20 00:35:57,413 [DEBUG] 	Events in Block File 4940
+2015-10-20 00:35:57,425 [DEBUG] 	Events in Block File 5000
+2015-10-20 00:35:57,437 [DEBUG] 	
+Job 7 can run over 1000 events.
+Job 7 Destination: ['T2_IT_Bari']
+Job 8 can run over 1000 events.
+Job 8 Destination: ['T2_IT_Bari']
+Job 9 can run over 1000 events.
+Job 9 Destination: ['T2_IT_Bari']
+Job 10 can run over 1000 events.
+Job 10 Destination: ['T2_IT_Bari']
+Job 11 can run over 1000 events.
+Job 11 Destination: ['T2_IT_Bari']
+
+2015-10-20 00:35:57,437 [INFO] 	11 job(s) can run on 9990 events.
+
+2015-10-20 00:35:57,439 [INFO] 	List of jobs and available destination sites:
+
+Block     1: jobs                    1: sites: T2_IT_Bari
+Block     2: jobs                  2-6: sites: T2_IT_Bari
+Block     3: jobs                 7-11: sites: T2_IT_Bari
+
+2015-10-20 00:35:57,480 [DEBUG] 	PsetManipulator::__init__: PSet file = analysisTiming_Loose.py
+2015-10-20 00:35:58,640 [DEBUG] 	Output from TFileService OutTree.root already in output files
+2015-10-20 00:35:58,689 [DEBUG] 	Exe /cvmfs/cms.cern.ch/slc6_amd64_gcc472/cms/cmssw/CMSSW_6_2_0_SLHC26/bin/slc6_amd64_gcc472/cmsRun to be tarred
+2015-10-20 00:35:58,755 [DEBUG] 	lib /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/lib to be tarred
+2015-10-20 00:36:08,225 [DEBUG] 	data SimTracker/TrackerMaterialAnalysis/data to be tarred
+2015-10-20 00:36:11,642 [DEBUG] 	data RecoMuon/MuonIdentification/data to be tarred
+2015-10-20 00:36:12,259 [DEBUG] 	data SimDataFormats/GeneratorProducts/data to be tarred
+2015-10-20 00:36:12,351 [DEBUG] 	data SLHCUpgradeSimulations/L1CaloTrigger/data to be tarred
+2015-10-20 00:36:16,072 [DEBUG] 	data SLHCUpgradeSimulations/Geometry/data to be tarred
+2015-10-20 00:36:16,821 [DEBUG] 	data RecoLocalMuon/GEMRecHit/data to be tarred
+2015-10-20 00:36:17,221 [DEBUG] 	Creator: JobType CMSSW created
+2015-10-20 00:36:17,221 [DEBUG] 	Creator: total # of jobs = 11
+2015-10-20 00:36:17,221 [DEBUG] 	Creator constructor finished
+2015-10-20 00:36:17,405 [DEBUG] 	parseRange_ None
+2015-10-20 00:36:17,415 [DEBUG] 	Scram::Scram() version is 2
+2015-10-20 00:36:17,416 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc472
+2015-10-20 00:36:17,416 [DEBUG] 	Creator::run() called
+2015-10-20 00:36:17,417 [DEBUG] 	Scram::Scram() version is 2
+2015-10-20 00:36:17,417 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc472
+2015-10-20 00:36:17,562 [INFO] 	Creating 11 jobs, please wait...
+2015-10-20 00:36:17,562 [DEBUG] 	Creation Time: 0.146420001984
+2015-10-20 00:36:17,563 [INFO] 	Total of 11 jobs created.
+
+2015-10-20 00:36:17,563 [DEBUG] 	Submitter::run() called
+2015-10-20 00:36:17,573 [DEBUG] 	nsjobs -1
+2015-10-20 00:36:17,573 [DEBUG] 	Total jobs 11
+2015-10-20 00:36:17,583 [DEBUG] 	nj_list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2015-10-20 00:36:17,799 [DEBUG] 	GRIDNAME: /C=TW/O=AP/OU=GRID/CN=Amandeep Kaur Kalsi 129089 
+2015-10-20 00:36:18,266 [DEBUG] 	Submission DashBoard Pre-Submission report: {'ApplicationVersion': 'CMSSW_6_2_0_SLHC26_patch3', 'taskId': 'amkalsi_Loose_100ps_y2t07m', 'resubmitter': 'user', 'tool': 'crab2', 'vo': 'cms', 'tool_ui': 'cmslpc23.fnal.gov', 'JSToolVersion': '2.11.1_patch1', 'user': 'amkalsi', 'scheduler': 'GLIDEIN', 'taskType': 'analysis', 'CMSUser': 'amkalsi', 'jobId': 'TaskMeta', 'datasetFull': '/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_100ps_1p5ns_RECO-a6c1ab73bd1959e4a7fbbca874362562/USER', 'exe': 'cmsRun', 'GridName': '/C=TW/O=AP/OU=GRID/CN=Amandeep Kaur Kalsi 129089', 'SubmissionType': 'direct'}
+2015-10-20 00:36:18,266 [INFO] 	Checking available resources...
+2015-10-20 00:36:18,282 [INFO] 	Found  compatible site(s) for job 1
+2015-10-20 00:36:18,283 [INFO] 	1 blocks of jobs will be submitted
+2015-10-20 00:36:18,283 [DEBUG] 	Delegating proxy 
+2015-10-20 00:36:18,284 [DEBUG] 	Submitting jobs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2015-10-20 00:36:18,314 [DEBUG] 	Calling ServerConfig default
+2015-10-20 00:36:18,314 [DEBUG] 	getting serverlist from web
+2015-10-20 00:36:18,314 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/AvailableServerList].
+2015-10-20 00:36:18,315 [DEBUG] 	All avaialble servers: [['cern_vocms0117', '2.8.4-', 'remoteGlidein'], ['cern_vocms0117', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-6', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-6', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-6', '2.8.4-', 'remoteGlidein']]
+2015-10-20 00:36:18,316 [DEBUG] 	All avaialble servers compatible with 2.11.1_patch1: ['cern_vocms0117', 'cern_vocms0117', 'ucsd_submit-6', 'ucsd_submit-6', 'ucsd_submit-6']
+2015-10-20 00:36:18,316 [DEBUG] 	Avaialble servers: ['cern_vocms0117', 'cern_vocms0117', 'ucsd_submit-6', 'ucsd_submit-6', 'ucsd_submit-6'] choosen: ucsd_submit-6
+2015-10-20 00:36:18,316 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/server_ucsd_submit-6.conf].
+2015-10-20 00:36:18,317 [INFO] 	remotehost from Avail.List = submit-6.t2.ucsd.edu
+2015-10-20 00:36:18,337 [INFO] 	list of PSN's for submission: T2_IT_Bari
+2015-10-20 00:36:18,337 [DEBUG] 	Scram::Scram() version is 2
+2015-10-20 00:36:18,338 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc472
+2015-10-20 00:36:18,619 [INFO] 	contacting remote host submit-6.t2.ucsd.edu
+2015-10-20 00:36:19,002 [INFO] 	COPY FILES TO REMOTE HOST
+2015-10-20 00:36:19,003 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/aman30/.ssh/ssh-link--1710352275-submit-6.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-6.t2.ucsd.edu  mkdir -p amkalsi_Loose_100ps_y2t07m
+2015-10-20 00:36:19,378 [DEBUG] 	Status,output= 0,
+2015-10-20 00:36:19,378 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/aman30/.ssh/ssh-link--1710352275-submit-6.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/share/default.tgz /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/share/arguments.xml /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/job/CMSSW.sh /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/share//amkalsi_Loose_100ps_y2t07m_job11.jdl /tmp/x509up_u46992 submit-6.t2.ucsd.edu:amkalsi_Loose_100ps_y2t07m
+2015-10-20 00:36:24,218 [DEBUG] 	Status,output= 0,
+2015-10-20 00:36:24,219 [INFO] 	SUBMIT TO REMOTE GLIDEIN FRONTEND
+2015-10-20 00:36:24,219 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/aman30/.ssh/ssh-link--1710352275-submit-6.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-6.t2.ucsd.edu "cd amkalsi_Loose_100ps_y2t07m;  condor_submit  amkalsi_Loose_100ps_y2t07m_job11.jdl; echo 'CONDOR_SUBMIT-EXIT-STATUS IS' \$?"
+2015-10-20 00:36:25,034 [DEBUG] 	Status,output= 0,Submitting job(s)...........
+11 job(s) submitted to cluster 666494.
+CONDOR_SUBMIT-EXIT-STATUS IS 0
+2015-10-20 00:36:25,036 [DEBUG] 	Returning {u'amkalsi_Loose_100ps_y2t07m_job11': 'submit-6.t2.ucsd.edu//151020//666494.10', u'amkalsi_Loose_100ps_y2t07m_job10': 'submit-6.t2.ucsd.edu//151020//666494.9', u'amkalsi_Loose_100ps_y2t07m_job9': 'submit-6.t2.ucsd.edu//151020//666494.8', u'amkalsi_Loose_100ps_y2t07m_job8': 'submit-6.t2.ucsd.edu//151020//666494.7', u'amkalsi_Loose_100ps_y2t07m_job7': 'submit-6.t2.ucsd.edu//151020//666494.6', u'amkalsi_Loose_100ps_y2t07m_job6': 'submit-6.t2.ucsd.edu//151020//666494.5', u'amkalsi_Loose_100ps_y2t07m_job5': 'submit-6.t2.ucsd.edu//151020//666494.4', u'amkalsi_Loose_100ps_y2t07m_job4': 'submit-6.t2.ucsd.edu//151020//666494.3', u'amkalsi_Loose_100ps_y2t07m_job3': 'submit-6.t2.ucsd.edu//151020//666494.2', u'amkalsi_Loose_100ps_y2t07m_job2': 'submit-6.t2.ucsd.edu//151020//666494.1', u'amkalsi_Loose_100ps_y2t07m_job1': 'submit-6.t2.ucsd.edu//151020//666494.0'}
+amkalsi_Loose_100ps_y2t07m
+cmslpc23.fnal.gov
+2015-10-20 00:36:25,050 [DEBUG] 	WMS : cmslpc23.fnal.gov
+Collection ID : amkalsi_Loose_100ps_y2t07m
+2015-10-20 00:36:25,060 [DEBUG] 	Submitted job # 1
+2015-10-20 00:36:25,060 [DEBUG] 	Submitted job # 2
+2015-10-20 00:36:25,060 [DEBUG] 	Submitted job # 3
+2015-10-20 00:36:25,061 [DEBUG] 	Submitted job # 4
+2015-10-20 00:36:25,061 [DEBUG] 	Submitted job # 5
+2015-10-20 00:36:25,061 [DEBUG] 	Submitted job # 6
+2015-10-20 00:36:25,061 [DEBUG] 	Submitted job # 7
+2015-10-20 00:36:25,061 [DEBUG] 	Submitted job # 8
+2015-10-20 00:36:25,061 [DEBUG] 	Submitted job # 9
+2015-10-20 00:36:25,062 [DEBUG] 	Submitted job # 10
+2015-10-20 00:36:25,062 [DEBUG] 	Submitted job # 11
+2015-10-20 00:36:25,083 [DEBUG] 	Updating [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]] state SubSuccess
+2015-10-20 00:36:25,315 [DEBUG] 	GRIDNAME: /C=TW/O=AP/OU=GRID/CN=Amandeep Kaur Kalsi 129089 
+2015-10-20 00:36:25,779 [DEBUG] 	Submission Time: 8.21619105339
+2015-10-20 00:36:25,779 [INFO] 	Total of 11 jobs submitted.
+2015-10-20 04:39:10,880 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -USER.user_remote_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -c=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -USER.ui_working_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -CMSSW.datasetpath=/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_100ps_1p5ns_RECO-a6c1ab73bd1959e4a7fbbca874362562/USER -status -CMSSW.pset=analysisTiming_Loose.py
+
+2015-10-20 04:39:10,880 [INFO] 	Version 2.11.1_patch1 running on Tue Oct 20 04:39:10 2015 CST (09:39:10 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/
+
+2015-10-20 04:39:10,880 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/allowed_releases.conf].
+2015-10-20 04:39:10,969 [DEBUG] 	Input whitelist: 
+2015-10-20 04:39:10,969 [DEBUG] 	Input blacklist: 
+2015-10-20 04:39:10,970 [DEBUG] 	Converted whitelist: 
+2015-10-20 04:39:10,970 [DEBUG] 	Converted blacklist: 
+2015-10-20 04:39:12,336 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/site_black_list.conf].
+2015-10-20 04:39:12,337 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2015-10-20 04:39:14,238 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/site_black_list.conf].
+2015-10-20 04:39:14,239 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2015-10-20 04:39:14,239 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2015-10-20 04:39:14,242 [DEBUG] 	Status::run() called
+2015-10-20 04:39:14,243 [INFO] 	Checking the status of all jobs: please wait
+2015-10-20 04:39:14,289 [INFO] 	contacting remote host submit-6.t2.ucsd.edu
+2015-10-20 04:39:14,659 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/aman30/.ssh/ssh-link--1710352275-submit-6.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u46992 submit-6.t2.ucsd.edu:amkalsi_Loose_100ps_y2t07m
+2015-10-20 04:39:15,109 [DEBUG] 	Status,output= 0,
+2015-10-20 04:39:15,110 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/aman30/.ssh/ssh-link--1710352275-submit-6.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-6.t2.ucsd.edu  "condor_history -userlog amkalsi_Loose_100ps_y2t07m/condor.log -xml"
+2015-10-20 04:39:15,619 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/aman30/.ssh/ssh-link--1710352275-submit-6.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-6.t2.ucsd.edu "cd amkalsi_Loose_100ps_y2t07m; egrep -H WrapperExitCode\|ExeExitCode crab_fjr_*xml|tr '_.\t\"' ' '|awk '{print \$3\" \"\$7\" \"\$9}'"
+2015-10-20 04:39:16,047 [DEBUG] 	Status,output= 0
+10 0 WrapperExitCode
+10 0 ExeExitCode
+11 0 WrapperExitCode
+11 0 ExeExitCode
+1 0 WrapperExitCode
+1 0 ExeExitCode
+2 0 WrapperExitCode
+2 0 ExeExitCode
+3 0 WrapperExitCode
+3 0 ExeExitCode
+4 0 WrapperExitCode
+4 0 ExeExitCode
+5 0 WrapperExitCode
+5 0 ExeExitCode
+6 0 WrapperExitCode
+6 0 ExeExitCode
+7 0 WrapperExitCode
+7 0 ExeExitCode
+8 0 WrapperExitCode
+8 0 ExeExitCode
+9 0 WrapperExitCode
+9 0 ExeExitCode
+2015-10-20 04:39:16,474 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     N   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+2     N   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+3     N   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+4     N   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+5     N   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+6     N   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+7     N   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+8     N   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+9     N   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+10    N   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+--------------------------------------------------------------------------------
+11    N   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+
+2015-10-20 04:39:16,491 [INFO] 	ExitCodes Summary
+ >>>>>>>>> 11 Jobs with Wrapper Exit Code : 0 
+	 List of jobs: 1-11 
+	See https://twiki.cern.ch/twiki/bin/view/CMSPublic/JobExitCodes for Exit Code meaning
+
+2015-10-20 04:39:16,491 [INFO] 	 11 Total Jobs 
+
+2015-10-20 04:39:16,497 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=amkalsi_Loose_100ps_y2t07m
+	Your task name is: amkalsi_Loose_100ps_y2t07m 
+
+2015-10-20 04:39:16,497 [DEBUG] 	Status Time: 2.25477099419
+2015-10-20 04:42:40,346 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -USER.user_remote_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -c=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -USER.ui_working_dir=DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps -CMSSW.datasetpath=/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/piet-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_100ps_1p5ns_RECO-a6c1ab73bd1959e4a7fbbca874362562/USER -status -get -CMSSW.pset=analysisTiming_Loose.py
+
+2015-10-20 04:42:40,346 [INFO] 	Version 2.11.1_patch1 running on Tue Oct 20 04:42:40 2015 CST (09:42:40 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/
+
+2015-10-20 04:42:40,346 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/allowed_releases.conf].
+2015-10-20 04:42:40,439 [DEBUG] 	Input whitelist: 
+2015-10-20 04:42:40,439 [DEBUG] 	Input blacklist: 
+2015-10-20 04:42:40,439 [DEBUG] 	Converted whitelist: 
+2015-10-20 04:42:40,439 [DEBUG] 	Converted blacklist: 
+2015-10-20 04:42:41,962 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/site_black_list.conf].
+2015-10-20 04:42:41,964 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2015-10-20 04:42:43,527 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/aman30/.cms_crab/site_black_list.conf].
+2015-10-20 04:42:43,528 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2015-10-20 04:42:43,528 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2015-10-20 04:42:43,535 [DEBUG] 	Status::run() called
+2015-10-20 04:42:43,535 [INFO] 	Checking the status of all jobs: please wait
+2015-10-20 04:42:43,620 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     Y   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+2     Y   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+3     Y   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+4     Y   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+5     Y   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+6     Y   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+7     Y   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+8     Y   Done              Terminated    0          0           cream-ce-2.ba.infn.it
+9     Y   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+10    Y   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+--------------------------------------------------------------------------------
+11    Y   Done              Terminated    0          0           ce-01.recas.ba.infn.it
+
+2015-10-20 04:42:43,636 [INFO] 	ExitCodes Summary
+ >>>>>>>>> 11 Jobs with Wrapper Exit Code : 0 
+	 List of jobs: 1-11 
+	See https://twiki.cern.ch/twiki/bin/view/CMSPublic/JobExitCodes for Exit Code meaning
+
+2015-10-20 04:42:43,637 [INFO] 	 11 Total Jobs 
+
+2015-10-20 04:42:43,643 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=amkalsi_Loose_100ps_y2t07m
+	Your task name is: amkalsi_Loose_100ps_y2t07m 
+
+2015-10-20 04:42:43,643 [DEBUG] 	Status Time: 0.107614994049
+2015-10-20 04:42:43,643 [DEBUG] 	GetOutput::run() called
+2015-10-20 04:42:43,861 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/ is not in AFS.
+Volume Name                    Quota       Used %Used   Partition
+ while checking AFS quota. Treat as check OK
+2015-10-20 04:42:43,868 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/ is not in AFS.
+Volume Name                  kbytes      used     avail %used
+ while checking partition. Treat as check OK
+2015-10-20 04:42:43,940 [INFO] 	contacting remote host submit-6.t2.ucsd.edu
+2015-10-20 04:42:44,304 [INFO] 	Preparing to rsync 2 files
+2015-10-20 04:42:45,410 [INFO] 	Results of Jobs # 1 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:42:45,622 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/ is not in AFS.
+Volume Name                    Quota       Used %Used   Partition
+ while checking AFS quota. Treat as check OK
+2015-10-20 04:42:45,630 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/ is not in AFS.
+Volume Name                  kbytes      used     avail %used
+ while checking partition. Treat as check OK
+2015-10-20 04:42:45,684 [INFO] 	contacting remote host submit-6.t2.ucsd.edu
+2015-10-20 04:42:46,065 [INFO] 	Preparing to rsync 20 files
+2015-10-20 04:43:11,582 [INFO] 	Results of Jobs # 2 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:14,534 [INFO] 	Results of Jobs # 3 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:17,572 [INFO] 	Results of Jobs # 4 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:20,409 [INFO] 	Results of Jobs # 5 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:23,063 [INFO] 	Results of Jobs # 6 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:25,607 [INFO] 	Results of Jobs # 7 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:28,580 [INFO] 	Results of Jobs # 8 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:31,642 [INFO] 	Results of Jobs # 9 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:34,600 [INFO] 	Results of Jobs # 10 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:37,699 [INFO] 	Results of Jobs # 11 are in /uscms_data/d3/aman30/ME0/CMSSW_6_2_0_SLHC26_patch3/src/Analyzer/ME0TimingAnalysis/python/DYToMuMu_M-20_TuneZ2star_14TeV_Piet/Loose_100ps/res/
+2015-10-20 04:43:40,514 [DEBUG] 	GetOutput Time: 56.8712940216
