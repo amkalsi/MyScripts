@@ -3,6 +3,9 @@ intial scripts...could be buggy
 
 Datasets to be used:
 
+1ps
+
+
 /DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/amkalsi-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution1ps-b0b349462b87ba52be1798b06a8d86fb/USER
 
 50ps
@@ -20,3 +23,13 @@ Datasets to be used:
 500 ps
 
 /DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/amkalsi-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution_500ps-234f53f4ed8c29359bbc4ab1d08753f2/USER
+
+1000 ps
+
+/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/amkalsi-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution_1ns-83f6356f061198cc36e38cb1315152e4/USER
+
+5000 ps
+
+/DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola/amkalsi-DYToMuMu_M-20_TuneZ2star_14TeV-pythia6-tauola_HGCALGS_PU140_MinBias_ME0_RECO_TimingResolution_5ns-83f6356f061198cc36e38cb1315152e4/USER
+
+
